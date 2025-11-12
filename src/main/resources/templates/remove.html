@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Remove Employee</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<h2>Remove Employee</h2>
+
+<form th:action="@{/remove}" method="post" th:object="${employee}">
+    <label>Employee ID:</label>
+    <input type="text" th:field="*{id}" required/><br><br>
+
+    <button type="submit">Remove</button>
+</form>
+
+<p th:text="${successMessage}" style="color: green;"></p>
+<p th:text="${errorMessage}" style="color: red;"></p>
+
+<a href="/">Back to Home</a>
+</body>
+</html>
