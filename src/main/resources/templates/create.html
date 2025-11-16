@@ -1,0 +1,24 @@
+<form th:action="@{/create}" th:object="${employee}" method="post" xmlns:th="http://www.w3.org/1999/xhtml">
+
+    <label>Name:</label>
+    <input type="text" th:field="*{employeeName}" /> <br><br>
+
+    <label>Email:</label>
+    <input type="text" th:field="*{employeeEmail}" /> <br><br>
+
+    <label>Department / Role:</label>
+    <input type="text" th:field="*{employeeRole}" /> <br><br>
+
+    <label>Phone:</label>
+    <input type="text" th:field="*{employeePhone}" /> <br><br>
+
+    <label>Gender:</label>
+    <input type="text" th:field="*{employeeGender}" /> <br><br>
+
+    <label>Salary:</label>
+    <input type="text" th:field="*{employeeSalary}" /> <br><br>
+
+    <button type="submit">Save</button>
+
+</form>
+
