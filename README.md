@@ -26,7 +26,7 @@ This is a simple employee management system built with Spring Boot, Spring Data 
 
 2.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Prajwal-banakar/Employee-Management-System
     ```
 
 3.  **Configure the database:**
