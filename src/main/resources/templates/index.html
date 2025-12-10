@@ -1,55 +1,20 @@
-<div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-     tabindex="-1" xmlns:th="http://www.w3.org/1999/xhtml">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <form class="p-2" th:action="@{/create}" th:object="${employee}" method="post">
-                    <h4 class="text-center">Add Employee</h4>
-
-                    <div class="row p-2">
-                        <label>Employee Name</label>
-                        <input type="text" th:field="*{employeeName}" class="form-control" placeholder="employee name" required>
-                    </div>
-
-                    <div class="row p-2">
-                        <label>Email</label>
-                        <input type="text" th:field="*{employeeEmail}" class="form-control" placeholder="email address" required>
-                    </div>
-
-                    <div class="row p-2">
-                        <label>Phone</label>
-                        <input type="tel" th:field="*{employeePhone}" class="form-control" placeholder="phone number" required>
-                    </div>
-
-                    <div class="row p-2">
-                        <label>Gender</label>
-                        <select th:field="*{employeeGender}" class="form-select" required>
-                            <option value="" selected>select option</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
-                    </div>
-
-                    <div class="row p-2">
-                        <label>Salary</label>
-                        <input type="number" th:field="*{employeeSalary}" class="form-control" placeholder="salary" required>
-                    </div>
-
-                    <div class="row p-2">
-                        <label>Employee Role</label>
-                        <select th:field="*{employeeRole}" class="form-select" required>
-                            <option value="" selected>select option</option>
-                            <option value="Java">Java Developer</option>
-                            <option value="Python">Python Developer</option>
-                            <option value="Web">Web Developer</option>
-                            <option value="Android">Android Developer</option>
-                            <option value="UI">UI Developer</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-success mt-3 mb-2">Add Employee</button>
-                </form>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Employee Management System</h1>
+        <div class="d-flex justify-content-center mt-4">
+            <a href="/create" class="btn btn-primary mx-2">Create Employee</a>
+            <a href="/update" class="btn btn-secondary mx-2">Update Employee</a>
+            <a href="/remove" class="btn btn-danger mx-2">Remove Employee</a>
+            <a href="/removeall" class="btn btn-warning mx-2">Remove All Employees</a>
         </div>
     </div>
-</div>
+</body>
+</html>

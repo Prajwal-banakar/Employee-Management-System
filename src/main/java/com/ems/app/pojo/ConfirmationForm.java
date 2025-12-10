@@ -1,8 +1,3 @@
-//package com.ems.app.pojo;
-//
-//public class ConfirmationForm {
-//}
-
 package com.ems.app.pojo;
 
 import lombok.AllArgsConstructor;
