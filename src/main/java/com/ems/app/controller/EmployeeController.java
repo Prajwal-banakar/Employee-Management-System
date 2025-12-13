@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
@@ -98,5 +99,12 @@ public class EmployeeController {
         }
 
         return "removeall";
+    }
+
+    @GetMapping("/viewall")
+    public String viewAllEmployees(Model model) {
+        List<Employee> employees = employeeRepo.findAll();
+        model.addAttribute("employees", employees);
+        return "viewall";
     }
 }
